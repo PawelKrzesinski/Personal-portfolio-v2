@@ -6,7 +6,8 @@ const form = (props) =>{
 		<form id="contact-form" onSubmit={props.onSubmit}>
 			<div className="form-box">
 				<input
-				className="inputFields" 
+				className="inputFields"
+				placeholder="Your fullname" 
 				type='text' 
 				value={props.fullName}
 				name='fullName' 
@@ -18,7 +19,8 @@ const form = (props) =>{
 			</div>
 			<div className="form-box">
 				<input
-				className="inputFields" 
+				className="inputFields"
+				placeholder="Your Email Address" 
 				type='email' 
 				value={props.email}
 				name='email' 
@@ -30,7 +32,8 @@ const form = (props) =>{
 			</div>
 			<div className="form-box">
 				<input
-				className="inputFields" 
+				className="inputFields"
+				placeholder="Your Company Name" 
 				type='text' 
 				value={props.companyName}
 				name='companyName' 
@@ -41,7 +44,8 @@ const form = (props) =>{
 			</div>
 			<div className="form-box">
 				<textarea
-				className="inputFields" 
+				className="inputFields"
+				placeholder="Your message" 
 				name="comment" 
 				value={props.comment}
 				form="contact-form" 
