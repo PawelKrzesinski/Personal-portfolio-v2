@@ -64,8 +64,4 @@ startServer = () => {
 	console.log(`Server running on ${PORT}`);
 }
 
-<<<<<<< HEAD
 startServer();
-=======
-startServer();
->>>>>>> refs/remotes/origin/master

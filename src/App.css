@@ -562,35 +562,6 @@ a{
 	}
 	.message-result{
 		border-radius: 25px/20%;
-<<<<<<< HEAD
-=======
-	}
-}
-
-@media only screen and (min-width: 1800px){
-	.section-1 {
-		height: 1000px;
-	}
-	.section-1 .h2-1 span{
-		font-size: 50px !important;
-	}
-	.section-1 .h2-1, 
-	.section-1 .h2-2,
-	.section-1 .h2-3{
-		font-size: 45px;
-	}
-	.button-aboutMe a{
-		padding: 28px;
-	}
-	.button-aboutMe {
-		margin-top: 750px;
-		width: 300px;
-		font-size: 30px;
-		height: 100px;
-	}
-	.button-aboutMe:hover{
-		border-radius: 25px/25%;
->>>>>>> refs/remotes/origin/master
 	}
 }
 
