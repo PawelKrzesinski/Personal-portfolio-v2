@@ -24,7 +24,7 @@ class App extends Component {
 			messageBox.style.display = "flex";
 		}, 0)
 		spinner.style.display = "block";
-		fetch('http://localhost:3001/send', {
+		fetch('http://192.168.1.76:3001/send', {
 			method: 'POST',
 			body: JSON.stringify(this.state),
 			headers: {
