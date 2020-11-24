@@ -24,7 +24,8 @@ transporter.verify((error, success) => {
 	}
 })
 
-router.post('./send', (req, res, next) => {
+router.post('/send', (req, res, next) => {
+	console.log(req.body);
 	const name = req.body.fullName;
 	var companyName = req.body.companyName;
 	const email = req.body.email;
@@ -51,8 +52,16 @@ router.post('./send', (req, res, next) => {
 	})
 })
 
+const PORT = process.env.PORT || 3001
 const app = express()
 app.use(cors())
 app.use(express.json())
 app.use('/', router)
-app.listen(3000)
+
+
+startServer = () => {
+	app.listen(PORT)
+	console.log(`Server running on ${PORT}`);
+}
+
+startServer();

@@ -3,44 +3,58 @@ import React from 'react';
 
 const form = (props) =>{
 	return (
-		<form id="contact-form">
-			<div className="form-container">
-				<label htmlFor="fullName">Full name:</label>
-				<input 
+		<form id="contact-form" onSubmit={props.onSubmit}>
+			<div className="form-box">
+				<input
+				className="inputFields"
+				placeholder="Your fullname" 
 				type='text' 
 				value={props.fullName}
 				name='fullName' 
-				placeholder="Your full name..."  
+				onChange={props.changed}
+				required={true}
+				/>
+				<label htmlFor="fullName">Full name:</label>
+				<span className="animateInputBorder"></span>
+			</div>
+			<div className="form-box">
+				<input
+				className="inputFields"
+				placeholder="Your Email Address" 
+				type='email' 
+				value={props.email}
+				name='email' 
 				onChange={props.changed}
 				required={true}
 				/>
 				<label htmlFor="email" required>E-mail address:</label>
-				<input 
-				type='email' 
-				value={props.email}
-				name='email' 
-				placeholder="Your e-mail address..."  
-				onChange={props.changed}
-				required={true}
-				/>
-				<label htmlFor="companyName" required>Company Name:</label>
-				<input 
+				<span className="animateInputBorder"></span>
+			</div>
+			<div className="form-box">
+				<input
+				className="inputFields"
+				placeholder="Your Company Name" 
 				type='text' 
 				value={props.companyName}
 				name='companyName' 
-				placeholder="Your company name..."
 				onChange={props.changed}
 				/>
-				<label htmlFor="comment">Your message:</label>
-				<textarea 
+				<label htmlFor="companyName" required>Company Name:</label>
+				<span className="animateInputBorder"></span>
+			</div>
+			<div className="form-box">
+				<textarea
+				className="inputFields"
+				placeholder="Your message" 
 				name="comment" 
 				value={props.comment}
 				form="contact-form" 
-				placeholder="Leave your message in here..."
 				onChange={props.changed}
 				required={true}
-				/>		
-			</div>
+				/>
+				<label htmlFor="comment">Your message:</label>
+				<span className="animateInputBorder"></span>
+			</div>		
 		</form>
 	)
 }
