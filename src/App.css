@@ -560,6 +560,9 @@ a{
 		transition: all .3s linear;
 		border: 1px solid #00d8ff;
 	}
+	.message-result{
+		border-radius: 25px/20%;
+	}
 }
 
 @media only screen and (min-width: 1800px){
