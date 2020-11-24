@@ -21,4 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 config.js
+=======
+config.js
+>>>>>>> refs/remotes/origin/master
