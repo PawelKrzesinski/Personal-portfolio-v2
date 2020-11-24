@@ -1,7 +1,9 @@
 #root{
 	min-height: 100vh;
 	background: rgb(15, 15, 15);
+	width: 100%;
 }
+
 
 * {
 	margin: 0;
@@ -14,9 +16,8 @@ html{
 }
 
 body{
+	width: 100%;
 	min-height: 100vh;
-	margin: 0;
-	padding: 0;
 	letter-spacing: 0.1rem;
 	display: flex;
 	flex-direction: column;
@@ -29,6 +30,7 @@ a{
 .App {
 	text-align: center;
 	min-height: 100vh;
+	width: 100%;
 	background: rgb(15, 15, 15);
 }
 
@@ -43,8 +45,6 @@ a{
 .navbar h1{
 	margin-left: 10px;
 }
-
-
 
 .navbar a{
 	color: rgb(240, 240, 240);
@@ -112,7 +112,6 @@ a{
 	  background-position: -500%;
 	}
   }
-
 
 
 @media only screen and (min-width: 300px){
@@ -221,7 +220,8 @@ a{
 	.button-aboutMe a{
 		color: rgb(240, 240, 240);
 		transition: all 0.3s linear;
-		padding: 22px 24px;
+		padding: 25px 20px;
+		width: 100%;
 	}
 	.section-2{
 		padding-top: 100px;
@@ -261,43 +261,45 @@ a{
 	.section-2 h2:nth-child(odd){
 		transform: rotate(-10deg);
 	}
+	.section-2 h2:last-child{
+		margin-bottom: 200px;
+	}
 	.section-3 {
 		padding: 5rem 1rem;
 		margin-top: 5rem;
-		background: #00d8ff;
+		background: rgb(25, 25, 25);
 		border: none;
 		position: relative;
 	}
 	.section-3 h2 {
+		font-size: 25px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 		margin-bottom: 3rem;
 		font-weight: 400 !important;
-		overflow: hidden;
-		background: linear-gradient(90deg,gray, black, gray);
-		background-repeat: no-repeat;
-		background-size: 80%;
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: rgba(255, 255, 255, 0.3);
-		animation: shine 1s linear infinite;
+		width: 320px;
+		animation: glow 2s linear infinite alternate;
+		
 	}
 	.section-3:before{
 		content: '';
 		position: absolute;
-		border-bottom: 100px solid#00d8ff;
+		border-bottom: 100px solid rgb(25, 25, 25);
 		border-left: 100vw solid transparent;
 		border-top: none;
-		 border-right: none;
-		top: -99px;
+		border-right: none;
+		top: -100px;
 		right: 0;
 		
 	}
 	.section-3:after{
 		content: '';
 		position: absolute;
-		border-top: 100px solid #00d8ff;
+		border-top: 100px solid rgb(25, 25, 25);
 		border-right: 100vw solid transparent;
-		left: 0;
-		bottom: -99px;
+		left: -15px;
+		bottom: -100px;
 	}
 	.project-box{
 		display: grid;
@@ -322,7 +324,7 @@ a{
 		align-items: center;
 		justify-content: center;
 	}
-	.section-4 h3{
+	.section-4 h2{
 		margin-bottom: 1rem;
 	}
 	.section-4 h5{
@@ -336,13 +338,14 @@ a{
 		margin-top: 40px;
 	}
 	.section-4 label {
+		text-align: start;
 		padding-top: 10px;
 		position: absolute;
 		z-index: 0;
-		background-color: transparent;
 		height: 50px;
 		width: 260px;
 		transition: all .2s linear;
+		background-color: transparent;
 	}
 	.section-4 form input{
 		position: relative;
@@ -354,50 +357,80 @@ a{
 		background-color: transparent;		
 		outline: none;
 		border: none;
-		transition: all .2s linear;
+		transition: all .15s linear;
 		z-index: 1;
 		border-bottom: 1px solid darkgray;
+	}
+	.section-4 form textarea {
+		color: white;
+		background-color: transparent;
+		height: 50px;
+		border: none;
+		resize: none;	
+		outline: none;
+		font-size: 18px;
+		z-index: 1;
+		border-bottom: 1px solid darkgray;
+		transition: all .15s linear;
 	}
 	.animateInputBorder {
 		position: absolute;
 		bottom: 0;
 		width: 260px;
 		height: 0 !important;
-		border-bottom: solid 4px #00d8ff;  
+		border-bottom: solid 3px #00d8ff;  
 		transform: scaleX(0);
 		transition: transform 250ms ease-in-out;
 	}
-	#contact-form > div:nth-child(4) > label{
-		height: 150px;
-	}
-	.section-4 form input:focus, .section-4 form textarea:focus{
+	.section-4 form textarea:focus, .section-4 form input:focus{
 		border: none;
+	}
+	.section-4 form textarea:focus{
+		height: 150px;
 	}
 	.section-4 form input:focus ~ .animateInputBorder,
 	.section-4 form textarea:focus ~ .animateInputBorder{
 		  transform: scaleX(1);
 	}
-
+	.section-4 form input::placeholder, .section-4 form textarea::placeholder{
+		color: transparent;
+	}
 	.section-4 form input:focus ~ label,
-	.section-4 form textarea:focus ~ label{
+	.section-4 form input:not(:placeholder-shown) ~ label{
 		padding: 0;
-		transform: translateY(-10px);
+		transform: translateY(-25px);
 		color: #00d8ff;
 		font-size: 14px;
 	}
-
-	.section-4 form textarea {
-		color: white;
-		background-color: transparent;
-		height: 150px;
-		border: none;
-		resize: none;	
-		outline: none;
-		padding: 10px;
-		font-size: 18px;
-		z-index: 1;
-		border-bottom: 1px solid darkgray;
+	
+	.section-4 form textarea:focus ~ label,
+	.section-4 form textarea:not(:placeholder-shown) ~ label{
+		padding: 0;
+		transform: translateY(-30px);
+		color: #00d8ff;
+		font-size: 14px;
+		height: 150px !important;
 	}
+	#contact-form > div:nth-child(4) > label{
+		height: 50px;
+	}
+	.section-4 form textarea:focus ~ #contact-form > div:nth-child(4) > label{
+		height: 150px !important;
+	}
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active,
+	.section-4 form input:not(:placeholder-shown) {
+		box-shadow: 0 0 0 1000px rgb(15, 15, 15) inset;
+		/* transition: background-color 5000s ease-in-out 0s;     */
+	}
+	input:-webkit-autofill {
+		-webkit-text-fill-color: whitesmoke;
+	}
+	input:-webkit-autofill:focus {  
+		-webkit-text-fill-color: whitesmoke;
+	} 
 	.message-result-container{
 		position: fixed;
 		top: 0;
@@ -413,9 +446,10 @@ a{
 	}
 	.message-result{
 		display: none;
-		font-size: 40px;
-		background-color: rgba(240, 240, 240, 0.7);
-		border-radius: 25px/15%;
+		font-size: 20px;
+		background-color: rgb(15, 15, 15);
+		border: 1px solid #00d8ff;
+		border-radius: 20px/25%;
 		padding: 15px;
 		margin: 5px;
 		width: 300px;
@@ -423,9 +457,10 @@ a{
 	.message-result-container h5{
 		display: none;
 		margin-top: 30px;
-		font-size: 25px;
-		background-color: rgba(240, 240, 240, 0.7);
-		border-radius: 15px/15%;
+		font-size: 15px;
+		background-color: rgb(15, 15, 15);
+		border: 1px solid #00d8ff;
+		border-radius: 20px/25%;
 		padding: 20px;
 		width: 300px;
 	}
@@ -440,10 +475,11 @@ a{
 	#submit {
 		background-color: #00d8ff;
 		width: 260px;
-		border: none;
+		border: 1px solid transparent;
 		padding: 10px;
 		font-size: 20px;
 		cursor: pointer;
+
 	}
 	#submit:active {
 		color: #00d8ff;
@@ -455,6 +491,10 @@ a{
 
 @media only screen and (min-width: 768px) {
 	.section-2 h2 {
+		width: 450px;
+	}
+	.section-3 h2 {
+		font-size: 40px;
 		width: 450px;
 	}
 	.logo{
@@ -482,13 +522,12 @@ a{
 		width: 210px;
 	}
 	.button-aboutMe a{
-		padding: 22px 28px;
+		padding: 20px;
 	}
 	.button-aboutMe:hover{
 		background-color: lightgray;
 		border-color: lightgray;
-		width: 225px;
-		height: 60px;
+		border-radius: 20px/25%;
 	}
 	.button-aboutMe:hover > a{
 		color: black;
@@ -497,12 +536,54 @@ a{
 
 	.section-2 h2 {
 		width: 600px;
-		font-size: 40px;
+		font-size: 35px;
 		margin-top: 250px;
 		transition: all .6s ease-in-out;
 	}
 	.section-2 h2:hover {
 		transform: rotateX(0) scale(1.2);
 		color: #00d8ff;
+	}
+	.section-4 h2{
+		font-size: 30px;
+	}
+	.section-4 h5 {
+		font-size: 20px;
+	}
+	.section-4 label {
+		font-size: 20px;
+	}
+	#submit:hover{
+		background-color: transparent;
+		color: #00d8ff;
+		letter-spacing: 2px;
+		transition: all .3s linear;
+		border: 1px solid #00d8ff;
+	}
+}
+
+@media only screen and (min-width: 1800px){
+	.section-1 {
+		height: 1000px;
+	}
+	.section-1 .h2-1 span{
+		font-size: 50px !important;
+	}
+	.section-1 .h2-1, 
+	.section-1 .h2-2,
+	.section-1 .h2-3{
+		font-size: 45px;
+	}
+	.button-aboutMe a{
+		padding: 28px;
+	}
+	.button-aboutMe {
+		margin-top: 750px;
+		width: 300px;
+		font-size: 30px;
+		height: 100px;
+	}
+	.button-aboutMe:hover{
+		border-radius: 25px/25%;
 	}
 }
