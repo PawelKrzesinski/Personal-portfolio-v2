@@ -126,7 +126,7 @@ class App extends Component {
 					<h5>krzesinskiwebsites@outlook.com</h5>
 					<h5>Or leave me a message here:</h5>
 					<div className="message-result-container" onClick={this.messageBoxFadeOut}>
-						<h2 className="message-result"></h2>
+						<h2 className="message-result"> </h2>
 						<img src={spinner} alt="loading..." className='spinner'/>
 						<h5 id='clickToContinue'>Click to continue</h5>	
 					</div>
