@@ -172,6 +172,7 @@ class App extends Component {
 										</div>
 									)
 								}
+								return null;
 							})}
 						</div>
 						<p className="section-3-subsection">HOBBY PROJECTS</p>
@@ -196,6 +197,7 @@ class App extends Component {
 									</div>
 								)
 							}
+							return null;
 						})}
 						</div>			
 					</div>
