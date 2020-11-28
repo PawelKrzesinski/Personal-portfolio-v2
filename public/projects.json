@@ -1,0 +1,48 @@
+{
+"projects" : [
+	{
+		"title": "Culinary Blog",
+		"image": "./images/projects/DashOfPassion.jpg",
+		"github": "https://github.com/PawelKrzesinski/DashOfPassion",
+		"live": "https://dash-of--passion.glitch.me",
+		"description": "Culinary Blog and recipe search engine.",
+		"professional": false,
+		"key": "foodblog"
+	},
+	{
+		"title": "To - Do App",
+		"image": "./images/projects/ToDoApp.jpg",
+		"github": "https://github.com/PawelKrzesinski/To-do-app",
+		"live": "https://mytodo-app1.glitch.me",
+		"description": "My to-do application using HTML, CSS and Javascript. Add and delete your daily to-do's.",
+		"professional": false,
+		"key": "tdapp"
+	},
+	{
+		"title": "Weather API App",
+		"image": "./images/projects/WeatherApp.jpg",
+		"github": "https://github.com/PawelKrzesinski/WeatherApp",
+		"live": "https://myweather-app.glitch.me",
+		"description": "Gets the current weather depending on geolocation. Updates every 5 minutes.",
+		"professional": false,
+		"key": "weatherapp"
+	},
+	{
+		"title": "ISS Tracking app",
+		"image": "./images/projects/iss-tracking-app.jpg",
+		"github": "https://github.com/PawelKrzesinski/iss-tracking-app",
+		"live": "https://pawelkrzesinski.github.io/iss-tracking-app/",
+		"description": "International Space Station tracking APP.",
+		"professional": false,
+		"key": "issapp"
+	},
+	{
+		"title": "Personal Portfolio",
+		"image": "./images/projects/portfolio.jpg",
+		"github": "https://github.com/PawelKrzesinski/Personal-Website",
+		"live": "https://pawelkrzesinski.github.io/Personal-Website/",
+		"description": "My first Portfolio. You can access my very first projects in there, my resume and contact me form.",
+		"professional": true,
+		"key": "portfolio"	
+	}
+]}

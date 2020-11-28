@@ -1,0 +1,34 @@
+{
+	"skills" :[
+		{
+			"skill" : "Javascript",
+			"icon": "./images/icons/js.svg",
+			"desc": "My main programming language. I used it in all my projects, solved challenges with and worked with it on a daily basis since i first started coding.",
+			"key": "01"
+		},
+		{
+			"skill" : "ReactJS",
+			"icon": "./images/icons/react.svg",
+			"desc": "React is an open-source, front end, JavaScript library for building user interfaces or UI components. I have used it to build this portfolio.",
+			"key": "02"
+		},
+		{
+			"skill" : "NodeJS",
+			"icon": "./images/icons/nodejs.svg",
+			"desc": "Node.js is a back-end technology that helped me in multiple projects, whether it was to run a server, hide an API key or send emails !",
+			"key": "03"
+		},
+		{
+			"skill" : "CSS3",
+			"icon": "./images/icons/css.svg",
+			"desc": "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.",
+			"key": "04"
+		},
+		{
+			"skill" : "HTML5",
+			"icon": "./images/icons/html.svg",
+			"desc": "Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.",
+			"key": "05"
+		}
+	]
+}
