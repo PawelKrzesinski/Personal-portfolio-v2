@@ -13,13 +13,13 @@ export const ThemeContextProvider = props => {
 	const theme = {
 		light: {
 			type: 'light',
-			primary: 'antiquewhite',
+			primary: 'lightgray',
 			secondary: 'Gainsboro',
-			navbar: 'rgba(250, 235, 215, 0.8)',
+			navbar: 'rgba(245, 245, 245, 0.8)',  //rgba(250, 235, 215, 0.8)
 			text: '#101010',
-			textShadow: '2px 2px 1px white',
+			textShadow: '1px 1px 1px black',
 			border: '#101010',
-			slantPrimary: 'antiquewhite'
+			slantPrimary: 'lightgray'
 		},
 		dark: {
 			type: 'dark',
@@ -29,7 +29,8 @@ export const ThemeContextProvider = props => {
 			text: 'antiquewhite',
 			textShadow: '2px 2px 1px black',
 			border: 'antiquewhite',
-			slantPrimary: 'rgb(15, 15, 15)'
+			slantPrimary: 'rgb(15, 15, 15)',
+			slantSecondary: 'rgb(25, 25, 25)'
 		},
 	}
 

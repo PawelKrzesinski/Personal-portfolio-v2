@@ -35,7 +35,7 @@ body{
 .navbar h1{
 	margin-left: 10px;
 }
-input{
+input, textarea{
 	color: rgb(250, 235, 215);
 }
 a {
@@ -166,10 +166,11 @@ a {
 		position: relative;
 		min-height: 1200px;
 		height: 100%;
+		margin-bottom: 100px;
 	}
 	.section-slant {
 		border-top: 100px solid transparent;
-		border-right: 100vw solid rgb(15, 15, 15);
+		border-right: 99vw solid rgb(15, 15, 15);
 		width: 100%;
 		height: 100px;
 		position: absolute;
@@ -189,13 +190,17 @@ a {
 		font-weight: 100;	
 		font-size: 20px;
 		text-shadow: 2px 2px 1px black;
-		border-top: 2px solid #00d8ff;
-		border-bottom: 2px solid #00d8ff;
+		/* border: 2px solid #00d8ff;
+		border-bottom: 2px solid #00d8ff; */
 		width: 300px;
 		padding: 0.5rem;
 		position: relative;
 		background-color: rgba(255, 255, 255, 0.1);
 		opacity: 1;
+		box-shadow: 0px 2px 5px #00d8ff;
+	}
+	.section-2 h2:hover {
+		box-shadow: 0px 4px 15px #00d8ff;
 	}
 	.section-2 h2:first-of-type{
 		margin-top: 25px !important;
@@ -208,7 +213,6 @@ a {
 		font-weight: 400 !important;
 	}
 	.section-3 {
-		margin-top: 5rem;
 		border: none;
 		position: relative;
 		display: flex;

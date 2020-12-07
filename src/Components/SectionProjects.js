@@ -14,14 +14,13 @@ export default function SectionProjects(props) {
 	}
 
 	const slant = {
-		borderRightColor: state.theme.slantPrimary
+		borderRightColor: state.theme.slantSecondary
 	}
 	const projects = props.projects;
 
 
 
 	return(
-	<div className="section-3-bg">
 		<div className="section-3" id="projects" style={section3}>
 			<div className="section-slant" style={slant}></div>
 			<p className="section-3-subsection">PROFESSIONAL PROJECTS</p>
@@ -49,7 +48,5 @@ export default function SectionProjects(props) {
 				})}
 			</div>
 		</div>
-	</div>
 	)
-	
 }

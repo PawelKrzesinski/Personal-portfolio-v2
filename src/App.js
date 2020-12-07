@@ -9,15 +9,14 @@ import './Css/Animations.css';
 import './Css/ThemeSwitch.css'
 import './Css/Navbar.css';
 
-import Form from './Components/Form.js';
-import SkillCard from './Components/SkillCard.js';
-import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
 import SectionAbout from './Components/SectionAbout'
 import SectionHome from './Components/SectionHome';
 import SectionProjects from './Components/SectionProjects'
-import ToggleTheme from './Components/ToggleTheme'
-import spinner from './images/Spinner-react-biggest.gif';
+import SectionSkills from './Components/SectionSkills.js';
+import SectionContact from './Components/SectionContact'
+import Footer from './Components/Footer';
+
 
 
 
@@ -98,6 +97,8 @@ class App extends Component {
 		const {wasMsgSent} = this.state;
 		const {projects} = this.state;
 		const {skills} = this.state;
+		const {handleChange} = this.handleChange.bind(this);
+		const {handleSubmit} = this.handleSubmit.bind(this);
 		return (
 			<ThemeContextProvider>
 			<div className="App" id="top">
@@ -106,47 +107,14 @@ class App extends Component {
 				<SectionAbout />
 				<SectionProjects 
 				projects={projects}/>
-				
-				<div className="section-4" id="skills"><span>SKILLS:</span>
-					<h1>In my programming journey, I have developed a set of skills:</h1>
-					<div className="skills-gridbox">
-						{skills.map(skill => {
-							return(
-							<SkillCard 
-							skill={skill} 
-							key={skill.key}/>
-							)
-						})}
-					</div>
-				</div>
-				<div className="section-5" id="contact">
-					<h3>CONTACT ME</h3>
-					<Form 
-					changed={this.handleChange.bind(this)}
-					onSubmit={this.handleSubmit.bind(this)}
-					method="POST"
-					/>
-					<img src={spinner} alt="Loading..." className="spinner"/>
-					<button 
-					type="submit" 
-					id="submit" 
-					form="contact-form"
-					>Submit</button>
-					<p>{wasMsgSent}</p>
-				</div>
-				<div className="icons-box">
-					<a href="https://www.linkedin.com/in/pawel-krzesinski-7a4a581a1/" className="social-media-link" target="_blank" rel="noopener noreferrer" >
-						<img src="https://img.icons8.com/nolan/64/linkedin.png" className="icons" alt="linkedin icon"/>
-					</a>
-					<a href="https://github.com/PawelKrzesinski" className="social-media-link" target="_blank" rel="noopener noreferrer" >
-						<img src="https://img.icons8.com/nolan/64/github.png" className="icons" alt="github icon"/>
-					</a>
-					<div className="theme-switch-box">
-						<ToggleTheme />
-						<p>Dark/Light</p>
-					</div>
-				</div>
-				<Footer />
+				<SectionSkills
+				skills={skills}/>
+				<SectionContact 
+				changed={handleChange}
+				onSubmit={handleSubmit}
+				wasMsgSent={wasMsgSent}/>
+				<Footer 
+				/>
 		</div>
 		</ThemeContextProvider>	
 	  );				
