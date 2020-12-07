@@ -25,13 +25,12 @@ transporter.verify((error, success) => {
 })
 
 router.post('/send', (req, res, next) => {
-	console.log(req.body);
 	const name = req.body.fullName;
 	var companyName = req.body.companyName;
 	const email = req.body.email;
 	const comment = req.body.comment;
-	const content = `Full name: ${name} \n Company Name: ${companyName} \n E-mail: ${email} \n Comment: ${comment}`;
-
+	const content = `Full name: ${name} \nCompany Name: ${companyName} \nE-mail: ${email} \nComment: ${comment}`;
+	console.log(content);
 	const mail = {
 		from: name,
 		to: creds.USER,
