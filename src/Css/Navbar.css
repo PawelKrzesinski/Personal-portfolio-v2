@@ -1,0 +1,70 @@
+.navbar{
+	background:rgba(10, 10, 10, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	z-index: 1000;
+	transition: all 0.2s linear;
+}
+.navbar h1{
+	margin-left: 10px;
+}
+@media only screen and (min-width: 300px){
+	.navbar{
+		display: flex;
+		flex-direction: row;
+		padding-bottom: 10px !important;
+		justify-content: space-evenly;
+		align-items: center;
+		letter-spacing: 0;
+	}
+	.logo {
+		margin-left: 10px;
+		margin-top: 5px;
+		width: 50px;
+		height: 50px;
+		font-weight: bolder;
+		font-size: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 5px solid antiquewhite;
+		border-radius: 25%/15px;
+	}
+	.navbar a:not(.logo){
+		border: none;
+		background-color: transparent;
+		font-size: 10px;
+		margin-top: 5px;
+	}
+
+	#contact{
+		margin-right: 5px;
+	}
+}
+
+
+@media only screen and (min-width: 425px) {
+	.navbar a:not(.logo) {
+		font-size: 13px;
+	}
+	.logo{
+		font-size: 45px;
+		width: 70px;
+		height: 70px;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+	.navbar a:not(.logo) {
+		font-size: 15px;
+	}
+}
+
+@media only screen and (min-width: 1800px){
+	.navbar a:not(.logo) {
+		font-size: 20px;
+	}
+}

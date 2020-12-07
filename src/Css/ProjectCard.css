@@ -1,0 +1,72 @@
+@media only screen and (min-width: 300px){
+	.project-box{
+		background-color: rgb(35, 35, 35);
+		padding: 20px;
+		min-height: 600px;
+		display: flex;
+		flex-direction: column;
+		box-shadow: 1px 1px 3px black;
+	}
+	.project-image{
+		box-sizing: initial;
+		width: 200px;
+		height: 200px;
+		border: none;
+		box-shadow: 1px 1px 10px antiquewhite;
+		object-fit: cover;
+	}
+	.project-button-box{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.project-button-box a{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #00d8ff;
+		border: 1px solid #00d8ff;
+		border-radius: 30px/50%;
+		text-transform: uppercase;
+		min-width: 120px;
+		width: 200px;
+		font-size: 15px;
+		margin: 5px;
+		padding: 12px 15px;
+	}
+
+	.project-box h4{
+		font-size: 25px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #00d8ff;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.project-desc{
+		margin: 20px 0;
+	}
+}
+@media only screen and (min-width: 425px){
+	.project-image{
+		width: 300px;
+		margin-bottom: 15px;
+	}
+	.project-desc{
+		height: 140px;
+	}
+}
+@media only screen and (min-width: 1024px){
+	.project-box:hover{
+		transform: scale(1.1);
+		transition: all 0.2s linear;
+		box-shadow: 2px 2px 8px black;
+	}
+	.project-live:hover,
+	.project-sourceCode:hover{
+		background-color: #00d8ff;
+		border: 1px solid transparent;
+		color: black;
+	}
+
+}

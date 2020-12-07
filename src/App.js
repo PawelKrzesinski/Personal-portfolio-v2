@@ -1,7 +1,25 @@
 import React, { Component } from 'react';
+import { ThemeContextProvider } from './Components/ThemeProvider'
+
 import './App.css';
-import Form from './Form.js'
+import './Css/Form.css';
+import './Css/SkillCard.css';
+import './Css/ProjectCard.css';
+import './Css/Animations.css';
+import './Css/ThemeSwitch.css'
+import './Css/Navbar.css';
+
+import Form from './Components/Form.js';
+import SkillCard from './Components/SkillCard.js';
+import Footer from './Components/Footer';
+import Navbar from './Components/Navbar';
+import SectionAbout from './Components/SectionAbout'
+import SectionHome from './Components/SectionHome';
+import SectionProjects from './Components/SectionProjects'
+import ToggleTheme from './Components/ToggleTheme'
 import spinner from './images/Spinner-react-biggest.gif';
+
+
 
 class App extends Component {
 	state = {
@@ -11,12 +29,6 @@ class App extends Component {
 				comment: "",
 				projects: [],
 				skills:[]
-
-	}
-	
-		
-	copyrights = () => {
-		return {__html: `&copy; Copyright ${new Date().getFullYear()}, Pawel Krzesinski`}
 	}
 	
 	componentDidMount () {
@@ -41,17 +53,14 @@ class App extends Component {
 			this.setState({skills: data.skills})
 		})
 	}
-
+	handleChange = e => {
+		this.setState({[e.target.name]: e.target.value})
+	}
 
 	handleSubmit = e => {
+		const loading = document.querySelector(".spinner");
+		loading.style.display = "block";
 		e.preventDefault()
-		const spinner = document.querySelector(".spinner");
-		const messageBox = document.querySelector('.message-result-container');
-		messageBox.style.animation = "fadeIn 0.5s linear";
-		setTimeout(() => {	
-			messageBox.style.display = "flex";
-		}, 0)
-		spinner.style.display = "block";
 		fetch('http://192.168.1.76:3001/send', {
 			method: 'POST',
 			body: JSON.stringify(this.state),
@@ -60,188 +69,86 @@ class App extends Component {
 				'Content-type': 'application/json'
 			},
 		}).then(response => {
-			spinner.style.display = "none";
+			loading.style.display = "none";
 			if(!response.ok){
 				console.error(response)
-				this.renderMessageSentWindow("Message not sent, sorry ! Try Again");
+				console.log("Message not sent")
+				this.setState({wasMsgSent: "Something went wrong. Try again or contact me through email"})
 			} else {
 				this.resetForm();
-				this.renderMessageSentWindow("Message has been sent !");
-				console.log("Message Sent")
+				console.log("Message sent")
+				this.setState({wasMsgSent: "Message has been sent!"})
 			}
 		})
 	}
-	handleChange = e => {
-		this.setState({[e.target.name]: e.target.value})
-	}
-
 
 	resetForm = () => {
 		this.setState({
 			fullName: "",
 			companyName: "",
 			email: "",
-			comment: ""
+			comment: "",
 		})
 		Array.from(document.querySelectorAll('.inputFields')).forEach( field => {
 			field.value = '';
 		})
 	}
 	
-	renderMessageSentWindow = (message) => {
-		const messageResult = document.querySelector('.message-result');
-		const continueClick = document.getElementById('clickToContinue')
-		messageResult.innerHTML = message;
-		messageResult.style.display = "block";
-		continueClick.style.display = "block";
-	}
-
-	messageBoxFadeOut = () => {
-		const messageBox = document.querySelector('.message-result-container');
-		const messageResult = document.querySelector('.message-result');
-		const continueClick = document.getElementById('clickToContinue')
-		messageBox.style.animation = "fadeOut 0.5s linear";
-		setTimeout(() => {
-			messageBox.style.display = "none";
-			messageResult.innerHTML = "";
-			messageResult.style.display = "none"
-			continueClick.style.display = "none";
-		}, 450)
-		
-	}
-
-
-	handleProjects = () => {
-		this.state.projects.forEach(project => {
-			console.log(project)
-		})
-	}
-
-
 	render() {
+		const {wasMsgSent} = this.state;
 		const {projects} = this.state;
 		const {skills} = this.state;
-		console.log(skills)
 		return (
+			<ThemeContextProvider>
 			<div className="App" id="top">
-				<div className="navbar">
-					<a href="./public/index.html" className="logo">K.</a>
-					<button className="navbar-home"><a href="#root">HOME</a></button>
-					<button className="navbar-about"><a href="#about">ABOUT</a></button>
-					<button className="navbar-projects"><a href="#projects">PROJECTS</a></button>
-					<button className="navbar-projects"><a href="#skills">SKILLS</a></button>
-					<button className="navbar-contact"><a href="#contact">CONTACT</a></button>
-				</div>
-				<div className="section-1" id="home">
-					<div className="filter">
-						<h2 className="h2-1"><span>Pawel Krzesinski</span> <br></br>Self-Taught Developer</h2>
-						<h2 className="h2-2">Designer</h2>
-						<h2 className="h2-3">Programmer</h2>
-						<button className="button-aboutMe"><a href="#about">More about me!</a></button>
-					</div>
-				</div>
-				<div className="section-2" id="about">
-					<img src="./images/myPhoto2.jpg" alt="" className="myPhoto"/>
-					<h2 className="section-2-text-1">Hi ! I am Pawel, I am a proactive and responsible Self-Taught Web Developer.</h2>
-					<h2 className="section-2-text-2">I am passionate about coding and always up for a challenge.</h2>
-					<h2 className="section-2-text-3">I love problem solving and have great attention to details !</h2>
-					<h2 className="section-2-text-4">I deliver beautiful, fully responsive websites for You and Your business!</h2>
-					<h2 className="section-2-text-5">If you are interested in working on a project together or need a website, <a href="#contact">GET IN TOUCH</a></h2>
-				</div>
-				<div className="section-3-bg">
-					<div className="section-3" id="projects">
-						<p className="section-3-subsection">PROFESSIONAL PROJECTS</p>
-						<div className="projects-professional">	
-							{projects.map(project => {
-								if(project.professional){
-									return (
-										<div key={project.key}>
-											<div className="project-box">
-												<h4>{project.title}</h4>
-												<a href={project.live} target='_blank' rel='noopener noreferrer'>
-													<img src={project.image} alt="" className="project-image" />
-												</a>
-												<div className="project-image-hover">
-													<p className="project-desc">{project.description}</p>
-													<div className="project-button-box">
-														<a href={project.live} className="project-live">Project live</a>
-														<a href={project.github} className="project-sourceCode">Source Code</a>
-													</div>	
-												</div>
-											</div>
-										</div>
-									)
-								}
-								return null;
-							})}
-						</div>
-						<p className="section-3-subsection">HOBBY PROJECTS</p>
-						<div className="projects-hobby">
-							{projects.map(project => {
-							if(!project.professional){
-								return (
-									<div key={project.key}>
-										<div className="project-box">
-											<h4>{project.title}</h4>
-											<a href={project.live} target='_blank' rel='noopener noreferrer'>
-												<img src={project.image} alt="" className="project-image" />
-											</a>
-											<div className="project-image-hover">
-												<p className="project-desc">{project.description}</p>
-												<div className="project-button-box">
-													<a href={project.live} className="project-live">Project live</a>
-													<a href={project.github} className="project-sourceCode">Source Code</a>
-												</div>	
-											</div>
-										</div>
-									</div>
-								)
-							}
-							return null;
-						})}
-						</div>			
-					</div>
-				</div>
+				<Navbar />
+				<SectionHome />
+				<SectionAbout />
+				<SectionProjects 
+				projects={projects}/>
+				
 				<div className="section-4" id="skills"><span>SKILLS:</span>
-					<h1>In my programming journey I have developed a set of skills:</h1>
+					<h1>In my programming journey, I have developed a set of skills:</h1>
 					<div className="skills-gridbox">
 						{skills.map(skill => {
-							return (
-								<div className="skill-box" key={skill.key}>
-									<h3 className="skill-title">{skill.skill}</h3>
-									<img src={skill.icon} alt="" className="skill-icon"/>
-									<p className="skill-desc">{skill.desc}</p>
-								</div>
+							return(
+							<SkillCard 
+							skill={skill} 
+							key={skill.key}/>
 							)
 						})}
 					</div>
 				</div>
 				<div className="section-5" id="contact">
 					<h3>CONTACT ME</h3>
-					<div className="message-result-container" onClick={this.messageBoxFadeOut}>
-						<h2 className="message-result"> </h2>
-						<img src={spinner} alt="loading..." className='spinner'/>
-						<h5 id='clickToContinue'>Click to continue</h5>	
-					</div>
 					<Form 
 					changed={this.handleChange.bind(this)}
 					onSubmit={this.handleSubmit.bind(this)}
 					method="POST"
 					/>
+					<img src={spinner} alt="Loading..." className="spinner"/>
 					<button 
 					type="submit" 
 					id="submit" 
 					form="contact-form"
 					>Submit</button>
-					
+					<p>{wasMsgSent}</p>
 				</div>
-			<div className="footer">
-				<h5 className="email">krzesinskiwebsites@outlook.com</h5>
-				<h6 className="mobile">MOBILE: 07402273196</h6>
-				<h6 className="location">EXETER, UNITED KINGDOM</h6>
-				<span className='copyrights' id='copyrights' dangerouslySetInnerHTML={this.copyrights()}></span>
-			</div>
-		</div>	
+				<div className="icons-box">
+					<a href="https://www.linkedin.com/in/pawel-krzesinski-7a4a581a1/" className="social-media-link" target="_blank" rel="noopener noreferrer" >
+						<img src="https://img.icons8.com/nolan/64/linkedin.png" className="icons" alt="linkedin icon"/>
+					</a>
+					<a href="https://github.com/PawelKrzesinski" className="social-media-link" target="_blank" rel="noopener noreferrer" >
+						<img src="https://img.icons8.com/nolan/64/github.png" className="icons" alt="github icon"/>
+					</a>
+					<div className="theme-switch-box">
+						<ToggleTheme />
+						<p>Dark/Light</p>
+					</div>
+				</div>
+				<Footer />
+		</div>
+		</ThemeContextProvider>	
 	  );				
 }}
 

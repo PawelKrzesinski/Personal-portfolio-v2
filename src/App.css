@@ -2,6 +2,7 @@
 	min-height: 100vh;
 	background: rgb(15, 15, 15);
 	width: 100%;
+	color: antiquewhite;
 }
 * {
 	margin: 0;
@@ -22,7 +23,6 @@ body{
 	text-align: center;
 	min-height: 100vh;
 	width: 100%;
-	background: rgb(15, 15, 15);
 }
 .navbar{
 	background:rgba(10, 10, 10, 0.8);
@@ -35,23 +35,21 @@ body{
 .navbar h1{
 	margin-left: 10px;
 }
-.navbar a{
-	color: antiquewhite;
+input{
+	color: rgb(250, 235, 215);
 }
-a{
+a {
 	text-decoration: none;
 }
 #skills span, 
 .section-3-subsection, 
 #contact h3{
-	color: antiquewhite;
 	font-size: 30px;
 	font-weight: 600;
 	animation: glow 2s linear infinite alternate;
 	margin-bottom: 25px;
 }
 .footer{
-	color: antiquewhite;
 	display: grid;
 	grid-template-areas: 
 	"a a"
@@ -79,90 +77,12 @@ a{
 	font-size: 15px;
 	grid-area: d;
 }
-@keyframes fadeIn {
-	0%{opacity: 0}
-	100%{opacity: 1}
-}
-@keyframes fadeOut {
-	0%{opacity: 1}
-	100%{opacity: 0}
-}
-@keyframes glow {
-	0% {
-		letter-spacing: initial;
-		color: antiquewhite;
-		text-shadow: 0 0 5px #00d8ff, 0 0 8px #00d8ff, 0 0 10px #00d8ff, 0 0 12px #00d8ff, 0 0 15px #00d8ff, 0 0 18px #00d8ff, 0 0 20px #00d8ff;
-	}
-	100%{
-		letter-spacing: 0.1;
-		color: gray;
-		text-shadow: none;
-	}
-}
-@keyframes reveal {
-	0% {
-		opacity: 0;
-		letter-spacing: 1.5vw;
-	}
-	50% {
-		opacity: 0.5;
-	}
-	100%{
-		color: gray;
-		opacity: 1;
-		letter-spacing: initial;
-	}
-}
-@keyframes shine {
-	0% {
-	  background-position: -500%; 
-	}
-	100% {
-	  background-position: 500%;
-	}
-}
-@keyframes reverseShine {
-	0% {
-	  background-position: 500%;
-	  
-	}
-	100% {
-	  background-position: -500%;
-	}
-}
+
 @media only screen and (min-width: 300px){
-	.navbar{
-		display: flex;
-		flex-direction: row;
-		padding-bottom: 10px !important;
-	}
-	.logo {
-		margin-left: 10px;
-		margin-top: 5px;
-		width: 50px;
-		height: 50px;
-		font-weight: bolder;
-		font-size: 30px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border: 5px solid antiquewhite;
-		border-radius: 25%/15px;
-	}
-	.navbar button{
-		border: none;
-		background-color: transparent;
-		font-size: 10px;
-		margin-left: 10px;
-		margin-top: 5px;
-	}
-	.navbar-contact{
-		margin-right: 5px;
-	}
 	.section-1{
-		margin-top: 4rem;
+		margin-top: 80px;
 		width: 100%;
-		height: 550px;
+		height: 750px;
 		background-image: url("./images/face.png");
 		background-position: top;
 		background-repeat: no-repeat;
@@ -186,12 +106,10 @@ a{
 		font-size: 25px;
 	}
 	.filter .h2-1{
-		color: antiquewhite;
 		margin-top: 20px;
 		animation: glow 2.5s ease-in-out infinite alternate 2.5s,
 					reveal 2.5s ease-in-out;
 		width: 100%;
-		transition: all 2s linear;
 		font-size: 20px;
 	}
 	.filter .h2-2{
@@ -203,7 +121,7 @@ a{
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: rgba(255, 255, 255, 0.3);
-		animation: shine 3s linear infinite;
+		animation: shine 2s linear infinite;
 		transform: translate(0%, 100px);
 		letter-spacing: 8px;
 	}
@@ -216,7 +134,7 @@ a{
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: rgba(255, 255, 255, 0.3);
-		animation: reverseShine 3s linear infinite;
+		animation: reverseShine 2s linear infinite;
 		transform: translate(0%, 150px);
 		letter-spacing: 8px;
 	}
@@ -238,27 +156,27 @@ a{
 		transition: all 0.3s linear;
 	}
 	.button-aboutMe a{
-		color: antiquewhite;
-		transition: all 0.3s linear;
 		padding: 25px 20px;
 		width: 100%;
+		text-decoration: none;
+		color: antiquewhite;
 	}
 	.section-2{
 		padding-top: 100px;
-		background: rgb(15, 15, 15);
 		position: relative;
 		min-height: 1200px;
 		height: 100%;
 	}
-	.section-2:before{
-		content: '';
+	.section-slant {
+		border-top: 100px solid transparent;
+		border-right: 100vw solid rgb(15, 15, 15);
+		width: 100%;
+		height: 100px;
 		position: absolute;
-		border-bottom: 60px solid rgb(15, 15, 15);
-		border-right: 100vw solid transparent;
-		top: -59px;
-		right: 0;		
+		top: -100px;
 	}
 	.myPhoto {
+		margin-top: 100px;
 		width: 175px;
 		height: 175px;
 		border-radius: 50%;
@@ -268,7 +186,6 @@ a{
 		margin-top: 50px;
 		margin-left: auto;
 		margin-right: auto;
-		color: antiquewhite;
 		font-weight: 100;	
 		font-size: 20px;
 		text-shadow: 2px 2px 1px black;
@@ -283,12 +200,6 @@ a{
 	.section-2 h2:first-of-type{
 		margin-top: 25px !important;
 	}
-	/* .section-2 h2:nth-child(even){
-		transform: rotate(90deg) translateY(50%);	
-	}
-	.section-2 h2:nth-child(odd){
-		transform: rotate(-90deg) translateY(50%);
-	} */
 	.section-2 h2:last-child{
 		margin-bottom: 150px;
 	}
@@ -298,7 +209,6 @@ a{
 	}
 	.section-3 {
 		margin-top: 5rem;
-		background: rgb(25, 25, 25);
 		border: none;
 		position: relative;
 		display: flex;
@@ -306,7 +216,7 @@ a{
 		align-items: center;
 		justify-content: center;
 	}
-	.section-3:before{
+	/* .section-3:before{
 		content: '';
 		position: absolute;
 		border-bottom: 100px solid rgb(25, 25, 25);
@@ -323,7 +233,7 @@ a{
 		border-right: 99vw solid transparent;
 		bottom: -100px;		
 		left: 0;
-	}
+	} */
 	.projects-professional{
 		margin: 50px 0;
 	}
@@ -340,62 +250,12 @@ a{
 		margin: 50px 0 100px 0;
 		width: 100%;
 	}
-	.project-box{
-		background-color: rgb(35, 35, 35);
-		padding: 20px;
-		min-height: 600px;
-		display: flex;
-		flex-direction: column;
-	}
-	.project-image{
-		box-sizing: initial;
-		width: 200px;
-		height: 200px;
-		border: none;
-		box-shadow: 1px 1px 10px antiquewhite;
-		object-fit: cover;
-	}
-	.project-button-box{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.project-button-box a{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: #00d8ff;
-		border: 1px solid #00d8ff;
-		border-radius: 30px/50%;
-		text-transform: uppercase;
-		min-width: 120px;
-		width: 200px;
-		font-size: 15px;
-		margin: 5px;
-		padding: 12px 15px;
-	}
-
-	.project-box h4{
-		color: antiquewhite;
-		font-size: 25px;
-		margin-bottom: 20px;
-		border-bottom: 1px solid #00d8ff;
-		width: 80%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.project-desc{
-		color: antiquewhite;
-		margin: 20px 0;
-	}
 	.section-4 {
-		margin: 100px 0;
+		margin: 100px 0 200px 0;
 		display: flex;
 		align-content: center;
 		justify-content: center;
 		flex-direction: column;
-		color: antiquewhite;
-		
 	}
 	.section-4 h1 {
 		font-size: 20px;
@@ -404,36 +264,13 @@ a{
 	.skills-gridbox{
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, 250px);
-		grid-template-rows: repeat(auto-fit, 320px);
+		grid-template-columns: repeat(auto-fit, 300px);
+		grid-template-rows: repeat(auto-fit, 400px);
 		justify-content: center;
 		gap: 30px;
 	}
-	.skill-box{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		background-color: rgb(25, 25, 25);
-		box-shadow: 2px 2px 10px antiquewhite;
-	}
-	.skill-title{
-		margin-top: 25px;
-		width: 60%;
-		font-size: 25px;
-		border-bottom: 2px solid #00d8ff;
-	}
-	.skill-desc{
-		font-size: 14px;
-		width: 85%;
-		/* margin: 5px 10px 20px 10px; */
-	}
-	.skill-icon{
-		margin: 10px 0;
-		width: 50px;
-		height: 50px;
-		background-color: lightgray;
-	}
-	.section-5:before{
+	
+	/* .section-5:before{
 		content: '';
 		position: absolute;
 		border-bottom: 100px solid rgb(25, 25, 25);
@@ -442,11 +279,10 @@ a{
 		border-right: none;
 		top: -99px;
 		right: 0;
-	}
+	} */
 	.section-5{
 		position: relative;
 		margin: 100px auto 0px auto;
-		color: antiquewhite;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -464,169 +300,33 @@ a{
 		margin-bottom: 20px;
 		margin-top: 40px;
 	}
-	.section-5 label {
-		text-align: start;
-		padding-top: 10px;
-		position: absolute;
-		z-index: 0;
-		height: 50px;
-		width: 260px;
-		transition: all .2s linear;
-		background-color: transparent;
-	}
-	.section-5 form input{
-		position: relative;
-		display: inline-block;
-		width: 260px;
-		height: 50px;
-		font-size: 18px;
-		color: antiquewhite;
-		background-color: transparent;		
-		outline: none;
-		border: none;
-		transition: all .15s linear;
-		z-index: 1;
-		border-bottom: 1px solid darkgray;
-	}
-	.section-5 form textarea {
-		color: antiquewhite;
-		background-color: transparent;
-		height: 50px;
-		border: none;
-		resize: none;	
-		outline: none;
-		font-size: 18px;
-		z-index: 1;
-		border-bottom: 1px solid darkgray;
-		transition: all .15s linear;
-	}
-	.animateInputBorder {
-		position: absolute;
+	.icons-box{
+		width: 300px;
+		height: 80px;
+		background-color: rgba(15, 15, 15, 0.95);
+		position: sticky;
 		bottom: 0;
-		width: 260px;
-		height: 0 !important;
-		border-bottom: solid 3px #00d8ff;  
-		transform: scaleX(0);
-		transition: transform 250ms ease-in-out;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 15px 15px 0 0/ 20% 20% 0 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		z-index: 100;
 	}
-	.section-5 form textarea:focus, .section-5 form input:focus{
-		border: none;
+	.icons{
+		width: 40px;
 	}
-	.section-5 form textarea:focus{
-		height: 150px;
-	}
-	.section-5 form input:focus ~ .animateInputBorder,
-	.section-5 form textarea:focus ~ .animateInputBorder{
-		  transform: scaleX(1);
-	}
-	.section-5 form input::placeholder, .section-5 form textarea::placeholder{
-		color: transparent;
-	}
-	.section-5 form input:focus ~ label,
-	.section-5 form input:not(:placeholder-shown) ~ label{
-		padding: 0;
-		transform: translateY(-25px);
-		color: #00d8ff;
+	.theme-switch-box{
 		font-size: 14px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 	
-	.section-5 form textarea:focus ~ label,
-	.section-5 form textarea:not(:placeholder-shown) ~ label{
-		padding: 0;
-		transform: translateY(-30px);
-		color: #00d8ff;
-		font-size: 14px;
-		height: 150px !important;
-	}
-	#contact-form > div:nth-child(5) > label{
-		height: 50px;
-	}
-	.section-5 form textarea:focus ~ #contact-form > div:nth-child(5) > label{
-		height: 150px !important;
-	}
-	input:-webkit-autofill,
-	input:-webkit-autofill:hover,
-	input:-webkit-autofill:focus,
-	input:-webkit-autofill:active,
-	.section-5 form input:not(:placeholder-shown) {
-		box-shadow: 0 0 0 1000px rgb(15, 15, 15) inset;
-	}
-	input:-webkit-autofill {
-		-webkit-text-fill-color: whitesmoke;
-	}
-	input:-webkit-autofill:focus {  
-		-webkit-text-fill-color: whitesmoke;
-	} 
-	.message-result-container{
-		position: fixed;
-		top: 0;
-		left: 0;
-		background-color: rgba(10, 10, 10, 0.8);
-		width: 100%;
-		height: 100vh;
-		display: none;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		z-index: 101;
-	}
-	.message-result{
-		display: none;
-		font-size: 20px;
-		background-color: rgb(15, 15, 15);
-		border: 1px solid #00d8ff;
-		border-radius: 20px/25%;
-		padding: 15px;
-		margin: 5px;
-		width: 300px;
-	}	
-	.message-result-container h5{
-		display: none;
-		margin-top: 30px;
-		font-size: 15px;
-		background-color: rgb(15, 15, 15);
-		border: 1px solid #00d8ff;
-		border-radius: 20px/25%;
-		padding: 20px;
-		width: 300px;
-	}
-	.spinner{
-		width: 150px;
-		display: block;
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	#submit {
-		background-color: #00d8ff;
-		width: 260px;
-		border: 1px solid transparent;
-		border-radius: 25px/25px;
-		padding: 10px;
-		font-size: 20px;
-		cursor: pointer;
-
-	}
-	#submit:active {
-		color: #00d8ff;
-		background-color: transparent;
-		border: 1px solid #00d8ff !important;
-		outline: none;
-	}
 }
 @media only screen and (min-width: 425px) {
-	.navbar {
-		justify-content: space-around;
-	}
-	.navbar button{
-		font-size: 13px;
-	}
-	.logo{
-		font-size: 45px;
-		width: 70px;
-		height: 70px;
-	}
 	.myPhoto{
 		width: 200px;
 		height: 200px;
@@ -636,13 +336,6 @@ a{
 		grid-template-rows: repeat(auto-fit, 650px);
 		grid-template-columns: repeat(auto-fit, 350px);
 		gap: 40px;
-	}
-	.project-image{
-		width: 300px;
-		margin-bottom: 15px;
-	}
-	.project-desc{
-		height: 140px;
 	}
 	.section-4 h1{
 		font-size: 23px;
@@ -656,9 +349,6 @@ a{
 }
 
 @media only screen and (min-width: 768px) {
-	.navbar button {
-		font-size: 15px;
-	}
 	.section-2 h2 {
 		font-size: 25px;
 		width: 450px;
@@ -673,16 +363,7 @@ a{
 	.skills-gridbox{
 		grid-template-columns: repeat(auto-fit, 300px) ;
 		grid-template-rows:	repeat(auto-fit, 400px) ;
-	}
-	.skill-title{
-		font-size: 30px;
-	}
-	.skill-desc{
-		font-size: 18px;
-	}
-	.skill-icon{
-		width: 75px;
-		height: 75px;
+		gap: 15px;
 	}
 	.location{
 		justify-self: flex-end;
@@ -691,7 +372,6 @@ a{
 		justify-self: flex-start;
 	}
 }
-
 
 @media only screen and (min-width: 1024px) {
 	.section-1 {
@@ -723,47 +403,30 @@ a{
 		color: black;
 		letter-spacing: 1px;
 	}
-
+	.myPhoto{
+		width: 400px;
+		height: 400px;
+	}
 	.section-2 h2 {
 		width: 600px;
 		font-size: 35px;
 		margin-top: 250px;
 		transition: all .6s ease-in-out;
 	}
-	.section-2 h2:hover {
-		transform: rotateX(0) scale(1.2);
-		color: #00d8ff;
-	}
 	.section-3 a{
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.project-box:hover{
-		transform: scale(1.1);
+	.icons:hover{
 		transition: all 0.2s linear;
+		transform: scale(1.2);
 	}
-	.project-live:hover,
-	.project-sourceCode:hover{
-		background-color: #00d8ff;
-		border: 1px solid transparent;
-		color: black;
-	}
-	
-	#submit:hover{
-		background-color: transparent;
-		color: #00d8ff;
-		letter-spacing: 2px;
-		transition: all .3s linear;
-		border: 1px solid #00d8ff;
-	}
-	.message-result{
-		border-radius: 25px/20%;
-	}
+
 }
 
 @media only screen and (min-width: 1800px){
 	.section-1 {
-		height: 1000px;
+		height: 1200px;
 	}
 	.section-1 .h2-1 span{
 		font-size: 50px !important;
