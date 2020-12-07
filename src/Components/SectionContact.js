@@ -15,14 +15,14 @@ export default function SectionContact(props) {
 	const slant = {
 		borderRightColor: state.theme.slantSecondary
 	}
-
 	
 	return(
 		<div className="section-5" id="contact" style={section5}>
+			<div className="section-slant" style={slant}></div>
 			<h3>CONTACT ME</h3>
 			<Form 
 			onSubmit={props.onSubmit}
-			onChange={props.changed}
+			changed={props.changed}
 			method="POST"
 			/>
 			<img src={spinner} alt="Loading..." className="spinner"/>

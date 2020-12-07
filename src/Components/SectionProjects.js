@@ -6,19 +6,27 @@ import ProjectCard from './ProjectCard';
 
 
 export default function SectionProjects(props) {
-
+	const projects = props.projects;
 	const state = useContext(ThemeContext)
 	
 	const section3 = {
-		backgroundColor: state.theme.secondary,	
+		backgroundColor: state.theme.secondary,
+		color: state.theme.text
 	}
 
 	const slant = {
 		borderRightColor: state.theme.slantSecondary
 	}
-	const projects = props.projects;
-
-
+	
+	const projectStyle = {
+		backgroundColor: state.theme.primary,
+		color: state.theme.text
+	}
+	const projectLinks = {
+		backgroundColor: state.theme.LinksColorBg,
+		color: state.theme.LinksText,
+		borderColor: state.theme.LinksColorBorder
+	}
 
 	return(
 		<div className="section-3" id="projects" style={section3}>
@@ -30,7 +38,9 @@ export default function SectionProjects(props) {
 						return(
 						<ProjectCard 
 						project={project} 
-						key={project.key}/>
+						key={project.key}
+						projectStyle={projectStyle}
+						projectLinks={projectLinks}/>
 					)} else 
 					return null;
 				})}
@@ -42,7 +52,9 @@ export default function SectionProjects(props) {
 						return (
 						<ProjectCard 
 						project={project} 
-						key={project.key}/>
+						key={project.key}
+						projectStyle={projectStyle}
+						projectLinks={projectLinks}/>
 					)} else 
 					return null;
 				})}

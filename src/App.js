@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ThemeContextProvider } from './Components/ThemeProvider'
 
+
 import './App.css';
 import './Css/Form.css';
 import './Css/SkillCard.css';
@@ -16,6 +17,7 @@ import SectionProjects from './Components/SectionProjects'
 import SectionSkills from './Components/SectionSkills.js';
 import SectionContact from './Components/SectionContact'
 import Footer from './Components/Footer';
+import NavbarBottom from './Components/NavbarBottom';
 
 
 
@@ -97,26 +99,24 @@ class App extends Component {
 		const {wasMsgSent} = this.state;
 		const {projects} = this.state;
 		const {skills} = this.state;
-		const {handleChange} = this.handleChange.bind(this);
-		const {handleSubmit} = this.handleSubmit.bind(this);
 		return (
 			<ThemeContextProvider>
-			<div className="App" id="top">
-				<Navbar />
-				<SectionHome />
-				<SectionAbout />
-				<SectionProjects 
-				projects={projects}/>
-				<SectionSkills
-				skills={skills}/>
-				<SectionContact 
-				changed={handleChange}
-				onSubmit={handleSubmit}
-				wasMsgSent={wasMsgSent}/>
-				<Footer 
-				/>
-		</div>
-		</ThemeContextProvider>	
+				<div className="App" id="top">
+					<Navbar />
+					<SectionHome />
+					<SectionAbout />
+					<SectionProjects 
+					projects={projects}/>
+					<SectionSkills
+					skills={skills}/>
+					<SectionContact 
+					changed={this.handleChange.bind(this)}
+					onSubmit={this.handleSubmit.bind(this)}
+					wasMsgSent={wasMsgSent}/>
+					<NavbarBottom />
+					<Footer />
+				</div>
+			</ThemeContextProvider>	
 	  );				
 }}
 

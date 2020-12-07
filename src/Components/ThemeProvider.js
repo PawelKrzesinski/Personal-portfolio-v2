@@ -19,7 +19,13 @@ export const ThemeContextProvider = props => {
 			text: '#101010',
 			textShadow: '1px 1px 1px black',
 			border: '#101010',
-			slantPrimary: 'lightgray'
+			slantPrimary: 'lightgray',
+			slantSecondary: 'Gainsboro',
+			LinksColorBg: 'Gainsboro',
+			LinksColorBorder: 'black',
+			LinksText: 'black',
+			LinkHoverBg: '#00d8ff',
+			BoxShadow: '2px 2px 5px black'
 		},
 		dark: {
 			type: 'dark',
@@ -30,7 +36,12 @@ export const ThemeContextProvider = props => {
 			textShadow: '2px 2px 1px black',
 			border: 'antiquewhite',
 			slantPrimary: 'rgb(15, 15, 15)',
-			slantSecondary: 'rgb(25, 25, 25)'
+			slantSecondary: 'rgb(25, 25, 25)',
+			LinksColorBg: 'rgb(25, 25, 25)',
+			LinksColorBorder: '#00d8ff',
+			LinksText: '#00d8ff',
+			LinkHoverBg: 'black',
+			BoxShadow: '2px 2px 5px antiquewhite'
 		},
 	}
 

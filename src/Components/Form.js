@@ -11,7 +11,7 @@ const form = (props) =>{
 				type='text' 
 				value={props.fullName}
 				name='fullName' 
-				onChange={props.onChange}
+				onChange={props.changed}
 				required={true}
 				/>
 				<label htmlFor="fullName">Full name:</label>
@@ -24,7 +24,7 @@ const form = (props) =>{
 				type='email' 
 				value={props.email}
 				name='email' 
-				onChange={props.onChange}
+				onChange={props.changed}
 				required={true}
 				/>
 				<label htmlFor="email" required>E-mail address:</label>
@@ -37,7 +37,7 @@ const form = (props) =>{
 				type='text' 
 				value={props.companyName}
 				name='companyName' 
-				onChange={props.onChange}
+				onChange={props.changed}
 				/>
 				<label htmlFor="companyName" required>Company Name:</label>
 				<span className="animateInputBorder"></span>
@@ -49,7 +49,7 @@ const form = (props) =>{
 				name="comment" 
 				value={props.comment}
 				form="contact-form" 
-				onChange={props.onChange}
+				onChange={props.changed}
 				required={true}
 				/>
 				<label htmlFor="comment">Your message:</label>
