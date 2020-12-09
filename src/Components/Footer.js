@@ -9,7 +9,9 @@ export default function Footer(){
 		return {__html: `&copy; Copyright ${new Date().getFullYear()}, Pawel Krzesinski`}
 	}
 	const footer = { 
-		backgroundColor: state.theme.primary
+		backgroundColor: state.theme.primary,
+		color: state.theme.text,
+		borderColor: state.theme.border
 	}
 
 	return(

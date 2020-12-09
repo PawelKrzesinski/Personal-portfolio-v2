@@ -12,7 +12,9 @@ function NavbarBottom(){
 	const state = useContext(ThemeContext)
 	
 	const navbarBottom = {
-		backgroundColor: state.theme.primary,	
+		backgroundColor: state.theme.primary,
+		borderColor: state.theme.border,
+		color: state.theme.text
 	}
 	return (
 			<div className="icons-box" style={navbarBottom}>
