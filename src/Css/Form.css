@@ -60,7 +60,6 @@
 	.section-5 form input:not(:placeholder-shown) ~ label{
 		padding: 0;
 		transform: translateY(-25px);
-		color: #00d8ff;
 		font-size: 14px;
 	}
 
@@ -68,7 +67,6 @@
 	.section-5 form textarea:not(:placeholder-shown) ~ label{
 		padding: 0;
 		transform: translateY(-30px);
-		color: #00d8ff;
 		font-size: 14px;
 		height: 150px !important;
 	}
@@ -81,19 +79,19 @@
 	.section-5 form textarea:focus ~ #contact-form > div:nth-child(5) > label{
 		height: 150px !important;
 	}
-	input:-webkit-autofill,
+	/* input:-webkit-autofill,
 	input:-webkit-autofill:hover,
 	input:-webkit-autofill:focus,
 	input:-webkit-autofill:active,
 	.section-5 form input:not(:placeholder-shown) {
-		box-shadow: 0 0 0 1000px rgb(15, 15, 15) inset;
+		box-shadow: 0 0 0 1000px rgb(25, 25, 25) inset;
 	}
 	input:-webkit-autofill {
 		-webkit-text-fill-color: whitesmoke;
 	}
 	input:-webkit-autofill:focus {  
 		-webkit-text-fill-color: whitesmoke;
-	} 
+	}  */
 
 	.spinner{
 		width: 75px;

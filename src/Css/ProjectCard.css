@@ -5,14 +5,13 @@
 		min-height: 600px;
 		display: flex;
 		flex-direction: column;
-		box-shadow: 1px 1px 3px black;
+		box-shadow: 1px 1px 5px#00d8ff;
 	}
 	.project-image{
 		box-sizing: initial;
 		width: 200px;
 		height: 200px;
 		border: none;
-		box-shadow: 1px 1px 10px antiquewhite;
 		object-fit: cover;
 	}
 	.project-button-box{
@@ -60,7 +59,7 @@
 	.project-box:hover{
 		transform: scale(1.1);
 		transition: all 0.2s linear;
-		box-shadow: 2px 2px 8px black;
+		box-shadow: 2px 2px 8px #00d8ff;
 	}
 	.project-live:hover,
 	.project-sourceCode:hover{

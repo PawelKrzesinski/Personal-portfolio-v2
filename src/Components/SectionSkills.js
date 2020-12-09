@@ -17,9 +17,14 @@ export default function SectionSkills(props) {
 	const slant = {
 		borderRightColor: state.theme.slantPrimary
 	}
+
+	const skillCardStyles = {
+		backgroundColor: state.theme.secondary,
+		boxShadow: state.theme.BoxShadow
+	}
+
+
 	const skills = props.skills;
-
-
 
 	return(
 		<div className="section-4" id="skills" style={section4}><span>SKILLS:</span>
@@ -30,7 +35,8 @@ export default function SectionSkills(props) {
 				return(
 					<SkillCard 
 					skill={skill} 
-					key={skill.key}/>
+					key={skill.key}
+					skillCardStyles={skillCardStyles}/>
 				)
 			})}
 			</div>

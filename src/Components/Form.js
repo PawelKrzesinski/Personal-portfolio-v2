@@ -4,7 +4,7 @@ import React from 'react';
 const form = (props) =>{
 	return (
 		<form id="contact-form" onSubmit={props.onSubmit}>
-			<div className="form-box">
+			<div className="form-box" >
 				<input
 				className="inputFields"
 				placeholder="Your fullname" 
@@ -13,6 +13,8 @@ const form = (props) =>{
 				name='fullName' 
 				onChange={props.changed}
 				required={true}
+				autoComplete="off"
+				style={props.inputTextColor}
 				/>
 				<label htmlFor="fullName">Full name:</label>
 				<span className="animateInputBorder"></span>
@@ -26,6 +28,8 @@ const form = (props) =>{
 				name='email' 
 				onChange={props.changed}
 				required={true}
+				autoComplete="off"
+				style={props.inputTextColor}
 				/>
 				<label htmlFor="email" required>E-mail address:</label>
 				<span className="animateInputBorder"></span>
@@ -38,6 +42,8 @@ const form = (props) =>{
 				value={props.companyName}
 				name='companyName' 
 				onChange={props.changed}
+				autoComplete="off"
+				style={props.inputTextColor}
 				/>
 				<label htmlFor="companyName" required>Company Name:</label>
 				<span className="animateInputBorder"></span>
@@ -51,6 +57,8 @@ const form = (props) =>{
 				form="contact-form" 
 				onChange={props.changed}
 				required={true}
+				autoComplete="off"
+				style={props.inputTextColor}
 				/>
 				<label htmlFor="comment">Your message:</label>
 				<span className="animateInputBorder"></span>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { ThemeContextProvider } from './Components/ThemeProvider'
-
+import { ThemeContextProvider } from './Components/ThemeProvider';
 
 import './App.css';
 import './Css/Form.css';
@@ -94,6 +93,8 @@ class App extends Component {
 			field.value = '';
 		})
 	}
+
+
 	
 	render() {
 		const {wasMsgSent} = this.state;

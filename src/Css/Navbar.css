@@ -5,7 +5,7 @@
 	left: 0;
 	width: 100vw;
 	z-index: 1000;
-	transition: all 0.2s linear;
+	transition: all 0.3s ease;
 }
 .navbar h1{
 	margin-left: 10px;

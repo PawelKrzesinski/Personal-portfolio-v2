@@ -17,7 +17,7 @@ export default function Navbar(){
 		<div className="navbar" style={navbar}>
 			<a href="./public/index.html" className="logo" style={a}>K.</a>
 			<a href="#root" style={a}>HOME</a>
-			<a href="#about" style={a}>ABOUT</a>
+			<a href="#myphoto" style={a}>ABOUT</a>
 			<a href="#projects" style={a}>PROJECTS</a>
 			<a href="#skills" style={a}>SKILLS</a>
 			<a href="#contact" style={a}>CONTACT</a>

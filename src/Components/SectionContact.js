@@ -9,11 +9,21 @@ export default function SectionContact(props) {
 	const state = useContext(ThemeContext)
 	
 	const section5 = {
-		backgroundColor: state.theme.secondary,	
+		backgroundColor: state.theme.secondary,
+		color: state.theme.text
 	}
 
 	const slant = {
-		borderRightColor: state.theme.slantSecondary
+		borderRightColor: state.theme.slantSecondary,
+		borderTopColor: state.theme.slantPrimary
+	}
+	const inputTextColor = {
+		color: state.theme.LinksText
+	}
+	const formBtnStyle = {
+		color: state.theme.text,
+		backgroundColor: state.theme.primary,
+		borderColor: state.theme.LinksText
 	}
 	
 	return(
@@ -24,12 +34,14 @@ export default function SectionContact(props) {
 			onSubmit={props.onSubmit}
 			changed={props.changed}
 			method="POST"
+			inputTextColor={inputTextColor}
 			/>
 			<img src={spinner} alt="Loading..." className="spinner"/>
 			<button 
 				type="submit" 
 				id="submit" 
 				form="contact-form"
+				style={formBtnStyle}
 			>Submit</button>
 			<p>{props.wasMsgSent}</p>
 		</div>

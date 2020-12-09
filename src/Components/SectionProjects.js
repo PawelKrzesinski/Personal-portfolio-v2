@@ -15,12 +15,14 @@ export default function SectionProjects(props) {
 	}
 
 	const slant = {
-		borderRightColor: state.theme.slantSecondary
+		borderRightColor: state.theme.slantSecondary,
+		borderTopColor: state.theme.slantPrimary
 	}
 	
 	const projectStyle = {
 		backgroundColor: state.theme.primary,
-		color: state.theme.text
+		color: state.theme.text,
+		boxShadow: state.theme.BoxShadow
 	}
 	const projectLinks = {
 		backgroundColor: state.theme.LinksColorBg,

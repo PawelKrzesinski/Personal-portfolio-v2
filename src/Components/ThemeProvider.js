@@ -14,18 +14,18 @@ export const ThemeContextProvider = props => {
 		light: {
 			type: 'light',
 			primary: 'lightgray',
-			secondary: 'Gainsboro',
+			secondary: 'silver',
 			navbar: 'rgba(245, 245, 245, 0.8)',  //rgba(250, 235, 215, 0.8)
 			text: '#101010',
 			textShadow: '1px 1px 1px black',
 			border: '#101010',
 			slantPrimary: 'lightgray',
-			slantSecondary: 'Gainsboro',
-			LinksColorBg: 'Gainsboro',
+			slantSecondary: 'silver',
+			LinksColorBg: 'silver',
 			LinksColorBorder: 'black',
 			LinksText: 'black',
 			LinkHoverBg: '#00d8ff',
-			BoxShadow: '2px 2px 5px black'
+			BoxShadow: '0px 0px 5px black',
 		},
 		dark: {
 			type: 'dark',
@@ -41,7 +41,7 @@ export const ThemeContextProvider = props => {
 			LinksColorBorder: '#00d8ff',
 			LinksText: '#00d8ff',
 			LinkHoverBg: 'black',
-			BoxShadow: '2px 2px 5px antiquewhite'
+			BoxShadow: '0px 0px 5px #00d8ff'
 		},
 	}
 

@@ -23,7 +23,9 @@ function NavbarBottom(){
 					<img src="https://img.icons8.com/nolan/64/github.png" className="icons" alt="github icon"/>
 				</a>
 				<div className="theme-switch-box">
-					<ToggleTheme />
+					<ToggleTheme 
+					// setTheme={props.setTheme}
+					/>
 				<p>Dark/Light</p>
 			</div>
 		
