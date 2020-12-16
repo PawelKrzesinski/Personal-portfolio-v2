@@ -109,7 +109,7 @@ a {
 		font-size: 30px;
 	}
 	.filter .h2-1{
-		margin-top: 20px;
+		margin-top: 15px;
 		animation: glow 2.5s ease-in-out infinite alternate 2.5s,
 					reveal 2.5s ease-in-out;
 		width: 100%;

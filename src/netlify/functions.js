@@ -2,15 +2,16 @@ const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 const cors = require('cors')
-const creds = require('./config.js')
 const serverless = require('serverless-http')
+require("dotenv").config();
+
 
 const transport =  {
 	host: 'smtp.office365.com',
 	port: 587,
 	auth: {
-		user: creds.USER,
-		pass: creds.PASS
+		user: process.env.USER,
+		pass: process.env.PASS
 	}
 }
 
@@ -33,7 +34,7 @@ router.post('/send', (req, res, next) => {
 	console.log(content);
 	const mail = {
 		from: name,
-		to: creds.USER,
+		to: process.env.USER,
 		subject: 'New message from Contact Form',
 		text: content
 	}

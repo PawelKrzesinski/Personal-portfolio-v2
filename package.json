@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "animate.css": "^4.1.1",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "nodemailer": "^6.4.14",
     "nodemon": "^2.0.6",
