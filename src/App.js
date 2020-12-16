@@ -61,7 +61,7 @@ class App extends Component {
 		const loading = document.querySelector(".spinner");
 		loading.style.display = "block";
 		e.preventDefault()
-		fetch('http://192.168.1.76:3001/send', {
+		fetch('https://krzesinski-websites.netlify.app/send', {
 			method: 'POST',
 			body: JSON.stringify(this.state),
 			headers: {

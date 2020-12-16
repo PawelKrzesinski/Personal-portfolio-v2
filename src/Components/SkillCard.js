@@ -15,3 +15,4 @@ const skillCard = (props) => {
 }
 
 export default skillCard;
+

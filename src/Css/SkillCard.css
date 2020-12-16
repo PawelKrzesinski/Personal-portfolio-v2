@@ -76,6 +76,7 @@
 	}
 	.flip-card-inner {
 		transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
 		transition: all 0.3s linear;
 	}
 	.flip-card:hover .flip-card-inner {
@@ -83,9 +84,15 @@
 	}	  	  
 	.flip-card-back {
 		transform: rotateY(180deg);
+		/* z-index: 0; */
 	}
 	.skill-box{
-		-webkit-backface-visibility: hidden; /* Safari */
+		/* z-index: 1; */
 		backface-visibility: hidden;
+		/* -moz-backface-visibility: hidden; Firefox */
+		-webkit-backface-visibility: hidden; /*  Safari */
+	}
+	.flip-card-inner:hover > .skill-box{
+		/* z-index: 0; */
 	}
 }
