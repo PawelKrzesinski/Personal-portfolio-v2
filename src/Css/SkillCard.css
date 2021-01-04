@@ -70,29 +70,29 @@
 		width: 150px;
 		height: 150px;
 	}
-
 	.flip-card{
 		perspective: 1000px;
+		
 	}
 	.flip-card-inner {
 		transform-style: preserve-3d;
 		-moz-transform-style: preserve-3d;
-		transition: all 0.3s linear;
+		transition: all 0.2s linear;
+		
 	}
 	.flip-card:hover .flip-card-inner {
 		transform: rotateY(180deg);
 	}	  	  
 	.flip-card-back {
 		transform: rotateY(180deg);
-		/* z-index: 0; */
+
 	}
 	.skill-box{
-		/* z-index: 1; */
 		backface-visibility: hidden;
-		/* -moz-backface-visibility: hidden; Firefox */
 		-webkit-backface-visibility: hidden; /*  Safari */
+		z-index: 1000;
 	}
-	.flip-card-inner:hover > .skill-box{
-		/* z-index: 0; */
+	.skill-box:hover{
+		opacity: 0;
 	}
 }

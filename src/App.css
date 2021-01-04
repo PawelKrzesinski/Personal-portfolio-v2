@@ -86,7 +86,7 @@ a {
 		margin-top: 80px;
 		width: 100%;
 		height: 750px;
-		background-image: url("./images/face.png");
+		background-image: url("./images/face4.jpg");
 		background-position: top;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -101,15 +101,15 @@ a {
 	}
 	.filter h2{
 		font-weight: 400;
-		font-size: 25px;
-		text-shadow: 2px 2px 1px black;
+		font-size: 20px;
+		text-shadow: 1px 1px 1px black;
 		text-transform: uppercase;
 	}
 	.filter h2 span{
 		font-size: 30px;
 	}
 	.filter .h2-1{
-		margin-top: 15px;
+		margin-top: 20px;
 		animation: glow 2.5s ease-in-out infinite alternate 2.5s,
 					reveal 2.5s ease-in-out;
 		width: 100%;
@@ -117,51 +117,50 @@ a {
 	.filter .h2-2{
 		font-weight: 400 !important;
 		overflow: hidden;
-		background: linear-gradient(90deg, #00d8ff, black, #00d8ff);
+		background: linear-gradient(90deg, #00d8ff, silver, #00d8ff);
 		background-repeat: no-repeat;
 		background-size: 60%;
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: rgba(255, 255, 255, 0.3);
 		animation: shine 2s linear infinite;
+		-moz-animation: mozGlow 2s linear infinite alternate 2s;
 		transform: translate(0%, 100px);
 		letter-spacing: 8px;
 	}
 	.filter .h2-3{
 		font-weight: 400 !important;
 		overflow: hidden;
-		background: linear-gradient(90deg, #00d8ff, black, #00d8ff);
+		background: linear-gradient(90deg, #00d8ff,silver, #00d8ff);
 		background-repeat: no-repeat;
 		background-size: 60%;
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: rgba(255, 255, 255, 0.3);
 		animation: reverseShine 2s linear infinite;
+		-moz-animation: mozGlow 2s linear infinite alternate 2s;
 		transform: translate(0%, 150px);
 		letter-spacing: 8px;
 	}
 	.button-aboutMe{
-		display: block;
+		display: flex;
+		justify-content: center;
+    	align-items: center;
 		margin-top: 400px;
 		margin-left: auto;
 		margin-right: auto;
 		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
 		width: 180px;
-		height: 70px;
+		padding: 20px;
 		font-size: 18px;
 		font-weight: bolder;
 		border: 2px solid antiquewhite;	
-		background-color: transparent;
+		background-color: rgba(255, 255, 255, 0.2);
 		z-index: 100;
 		transition: all 0.3s linear;
-	}
-	.button-aboutMe a{
-		padding: 25px 20px;
-		width: 100%;
-		text-decoration: none;
 		color: antiquewhite;
+		text-decoration: none;
+		white-space: nowrap;
 	}
 	.section-2{
 		padding: 100px 0;
@@ -188,7 +187,7 @@ a {
 	.section-2 h2{
 		margin-left: auto;
 		margin-right: auto;
-		font-weight: 100;	
+		font-weight: 300;	
 		font-size: 20px;
 		text-align: center;
 		width: 300px;
@@ -209,7 +208,7 @@ a {
 	.section-2 h2 a{
 		font-weight: 400 !important;
 		border: 3px solid #00d8ff;
-		border-radius: 15px/25%;
+		border-radius: 15px/34%;
 		padding: 5px 0;
 		width: 160px;
 		align-self: center;
@@ -379,6 +378,7 @@ a {
 @media only screen and (min-width: 1024px) {
 	.section-1 {
 		height: 750px;
+		background-image: url("./images/face7.jpg");
 	}
 	.section-1 h2 span{
 		font-size: 35px;
@@ -392,17 +392,13 @@ a {
 		margin-top: 450px;
 		width: 210px;
 	}
-	.button-aboutMe a{
-		padding: 20px;
-	}
 	.button-aboutMe:hover{
 		background-color: antiquewhite;
 		border-color: antiquewhite;
 		border-radius: 20px/25%;
 	}
-	.button-aboutMe:hover > a{
+	.button-aboutMe:hover{
 		color: black;
-		letter-spacing: 1px;
 	}
 	.myPhoto{
 		width: 400px;
@@ -462,9 +458,6 @@ a {
 		font-size: 60px;
 		font-weight: 100;
 	}
-	.button-aboutMe a{
-		padding: 28px;
-	}
 	.section-1 .h2-2,
 	.section-1 .h2-3{
 		font-size: 50px;
@@ -472,8 +465,8 @@ a {
 	.button-aboutMe {
 		width: 300px;
 		font-size: 30px;
-		height: 100px;
-		margin-top: 600px;
+		padding: 30px;
+		margin-top: 700px;
 	}
 	.button-aboutMe:hover{
 		border-radius: 25px/25%;
@@ -484,8 +477,4 @@ a {
 		margin: 0 50px;
 		padding: 0 35px;
 	}
-}
-
-@media only screen and (min-width: 1800px){
-
 }

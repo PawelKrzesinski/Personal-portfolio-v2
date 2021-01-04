@@ -41,3 +41,9 @@
 	  background-position: -500%;
 	}
 }
+
+@keyframes mozGlow {
+	0%{
+		text-shadow: 0 0 5px antiquewhite, 0 0 8px  antiquewhite;
+	}
+}

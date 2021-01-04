@@ -7,7 +7,7 @@ export default function SectionHome() {
 				<h2 className="h2-1"><span>Pawel Krzesinski</span> <br></br>Self-Taught Developer</h2>
 				<h2 className="h2-2">Designer</h2>
 				<h2 className="h2-3">Programmer</h2>
-				<button className="button-aboutMe"><a href="#about">More about me!</a></button>
+				<a href="#about"  className="button-aboutMe">More about me!</a>
 			</div>
 		</div>
 	)
