@@ -150,7 +150,6 @@ a {
 		margin-left: auto;
 		margin-right: auto;
 		position: absolute;
-		width: 180px;
 		padding: 20px;
 		font-size: 18px;
 		font-weight: bolder;
@@ -390,7 +389,6 @@ a {
 	.button-aboutMe {
 		font-size: 20px;
 		margin-top: 450px;
-		width: 210px;
 	}
 	.button-aboutMe:hover{
 		background-color: antiquewhite;
@@ -463,7 +461,6 @@ a {
 		font-size: 50px;
 	}
 	.button-aboutMe {
-		width: 300px;
 		font-size: 30px;
 		padding: 30px;
 		margin-top: 700px;
@@ -476,5 +473,108 @@ a {
 		height: 450px;
 		margin: 0 50px;
 		padding: 0 35px;
+	}
+}
+@media only screen and (min-width: 2200px){
+	.section-1{
+		height: 1500px;
+	}
+
+}
+
+@media only screen and (min-width: 3000px){
+	
+	.section-1 {
+		height: 2000px;
+	}
+}
+@media only screen and (min-width: 4000px){
+	.section-1 {
+		height: 3000px;
+	}
+	#skills span, 
+	.section-3-subsection, 
+	#contact h3{
+		font-size: 75px;
+	}
+	.section-1 .h2-1 span{
+		font-size: 100px;
+	}
+	.section-1 h2 {
+		font-size: 80px;
+	}
+	.filter .h2-1{
+		margin-top: 200px;
+	}
+	.filter .h2-2{
+		margin-top: 100px;
+		font-size: 70px;
+	}
+	.filter .h2-3{
+		font-size: 70px;
+	}
+	.button-aboutMe{
+		font-size: 45px;
+		padding: 40px;
+		margin-top: 1300px;
+	}
+	.button-aboutMe:hover{
+		border-radius: 10%/40px;
+	}
+	.myPhoto{
+		width: 750px;
+		height: 750px;
+	}
+	.section-2 h2{
+		font-size: 60px;
+		width: 750px;
+		height: 900px;
+		padding: 20px 50px
+	}
+	.section-2 h2 a{
+		font-size: 30px;
+		border-width: 4px;
+		border-radius: 10%/20px;
+	}
+	.projects-hobby,
+	.projects-professional{
+		grid-template-rows: repeat(auto-fit, 850px);
+		grid-template-columns: repeat(auto-fit, 600px);
+		gap: 60px;
+	}
+	.section-4 h1{
+		font-size: 50px;
+	}
+	.icons-box{
+		width: 400px;
+		height: 120px;
+		border-radius: 40px 40px 0 0/ 35% 35% 0 0;
+	}
+	.icons{
+		width: 75px;
+	}
+	.theme-switch-box{
+		font-size: 30px;
+	}
+	.section-5{
+		margin-bottom: -120px;
+		min-height: 1500px !important;
+	}
+	.skills-gridbox{
+		grid-template-columns: repeat(auto-fit, 600px) ;
+		grid-template-rows:	repeat(auto-fit, 800px) ;
+		gap: 60px;
+	}
+	.email,
+	.location,
+	.mobile,
+	#copyrights{
+		font-size: 40px;
+	}
+	.mobile{
+		margin-left: 75px;
+	}
+	.location{
+		margin-right: 75px;
 	}
 }

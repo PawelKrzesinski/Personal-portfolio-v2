@@ -79,20 +79,6 @@
 	.section-5 form textarea:focus ~ #contact-form > div:nth-child(5) > label{
 		height: 150px !important;
 	}
-	/* input:-webkit-autofill,
-	input:-webkit-autofill:hover,
-	input:-webkit-autofill:focus,
-	input:-webkit-autofill:active,
-	.section-5 form input:not(:placeholder-shown) {
-		box-shadow: 0 0 0 1000px rgb(25, 25, 25) inset;
-	}
-	input:-webkit-autofill {
-		-webkit-text-fill-color: whitesmoke;
-	}
-	input:-webkit-autofill:focus {  
-		-webkit-text-fill-color: whitesmoke;
-	}  */
-
 	.spinner{
 		width: 75px;
 		display: none;
@@ -124,5 +110,52 @@
 		letter-spacing: 2px;
 		transition: all .3s linear;
 		border: 1px solid #00d8ff;
+	}
+}
+
+@media only screen and (min-width: 4000px){
+	.section-5 label{
+		font-size: 50px;
+		white-space: nowrap;
+	}
+	.section-5 form input{
+		height: 100px;
+		width: 400px;
+		font-size: 50px;
+	}
+	.section-5 form input:focus ~ label,
+	.section-5 form input:not(:placeholder-shown) ~ label{
+		font-size: 25px;
+	}
+	.section-5 form textarea:focus ~ label,
+	.section-5 form textarea:not(:placeholder-shown) ~ label{
+		transform: translateY(-35px);
+		font-size: 25px;
+		height: 300px !important;
+	}
+
+	.section-5 form textarea{
+		height: 100px;
+		width: 400px;
+		font-size: 50px;
+	}
+	.section-5 form textarea:focus{
+		height: 300px !important;
+	}
+	.section-5 form textarea:focus ~ #contact-form > div:nth-child(5) > label{
+		height: 300px !important;
+	}
+	.animateInputBorder{
+		width: 400px;
+	}
+	.section-5 p{
+		margin-top: 100px;
+		font-size: 50px;
+	}
+	#submit{
+		margin-top: 50px;
+		width: 400px;
+		font-size: 50px;
+		z-index: 100;
 	}
 }

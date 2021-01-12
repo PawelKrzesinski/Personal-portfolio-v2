@@ -22,8 +22,6 @@
 	.logo {
 		margin-left: 10px;
 		margin-top: 5px;
-		width: 50px;
-		height: 50px;
 		font-weight: bolder;
 		font-size: 30px;
 		display: flex;
@@ -31,6 +29,7 @@
 		align-items: center;
 		border: 5px solid antiquewhite;
 		border-radius: 25%/15px;
+		padding: 4px 8px;
 	}
 	.navbar a:not(.logo){
 		border: none;
@@ -51,8 +50,6 @@
 	}
 	.logo{
 		font-size: 45px;
-		width: 70px;
-		height: 70px;
 	}
 
 }
@@ -61,10 +58,27 @@
 	.navbar a:not(.logo) {
 		font-size: 15px;
 	}
+	.logo{
+		padding: 2px 14px;
+		font-size: 60px;
+		border-radius: 25%/20px;
+	}
 }
 
 @media only screen and (min-width: 1800px){
 	.navbar a:not(.logo) {
 		font-size: 20px;
+	}
+}
+
+@media only screen and (min-width: 4000px){
+	.logo{
+		font-size: 90px;
+		border-radius: 25%/30px;
+		border-width: 10px;
+		padding: 2px 18px;
+	}
+	.navbar a:not(.logo){
+		font-size: 45px !important;
 	}
 }

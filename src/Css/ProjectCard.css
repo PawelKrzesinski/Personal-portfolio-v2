@@ -69,3 +69,29 @@
 	}
 
 }
+
+@media only screen and (min-width: 4000px){
+	.project-box{
+		width: 600px;
+		height: 850px;
+	}
+	.project-image{
+		width: 400px;
+		height: 300px;
+	}
+	.project-button-box{
+		margin-top: 100px;
+	}
+	.project-button-box a{
+		font-size: 25px;
+		width: 250px;
+	}
+	.project-box h4{
+		font-size: 50px;
+		white-space: nowrap;
+	}
+	.project-desc{
+		font-size: 35px;
+		padding: 15px;
+	}
+}
