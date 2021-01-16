@@ -51,7 +51,7 @@ router.post('/send', (req, res, next) => {
 	})
 })
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3000
 const app = express()
 app.use(cors())
 app.use(express.json())
