@@ -382,6 +382,9 @@ a {
 	.section-1 h2 span{
 		font-size: 35px;
 	}
+	.filter{
+		padding-top: 60px;
+	}
 	.section-1 h2{
 		margin-right: -600px;
 		font-size: 25px;
