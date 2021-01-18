@@ -112,7 +112,6 @@ a {
 		margin-top: 20px;
 		animation: glow 2.5s ease-in-out infinite alternate 2.5s,
 					reveal 2.5s ease-in-out;
-		width: 100%;
 	}
 	.filter .h2-2{
 		font-weight: 400 !important;
@@ -439,10 +438,10 @@ a {
 
 @media only screen and (min-width: 1500px){
 	.section-1 h2{
-		margin-right: -800px;
+		margin-right: -700px;
 	}
 	.button-aboutMe {
-		margin-right: -800px;
+		margin-right: -700px;
 	}
 	.filter h2 {
 		font-size: 40px;
