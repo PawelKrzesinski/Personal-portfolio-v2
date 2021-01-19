@@ -12,8 +12,18 @@ const projectCard = (props) => {
 				<div className="project-image-hover">
 					<p className="project-desc">{props.project.description}</p>
 						<div className="project-button-box">
-							<a href={props.project.live} className="project-live" style={props.projectLinks}>Project live</a>
-							<a href={props.project.github} className="project-sourceCode" style={props.projectLinks}>Source Code</a>
+							<a href={props.project.live} 
+							className="project-live" 
+							style={props.projectLinks}  
+							target='_blank' 
+							rel='noopener noreferrer'>Project live
+							</a>
+							<a href={props.project.github} 
+							className="project-sourceCode" 
+							style={props.projectLinks}  
+							target='_blank' 
+							rel='noopener noreferrer'>Source Code
+							</a>
 					</div>	
 				</div>
 			</div>
