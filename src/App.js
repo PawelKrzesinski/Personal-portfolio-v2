@@ -61,7 +61,7 @@ class App extends Component {
 		const loading = document.querySelector(".spinner");
 		loading.style.display = "block";
 		e.preventDefault()
-		fetch('http://pawel-krzesinski.co.uk/api/send', {
+		fetch('https://pawel-krzesinski.co.uk/api/send', {
 			method: 'POST',
 			body: JSON.stringify(this.state),
 			headers: {
