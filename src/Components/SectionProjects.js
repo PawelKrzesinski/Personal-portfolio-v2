@@ -33,7 +33,7 @@ export default function SectionProjects(props) {
 	return(
 		<div className="section-3" id="projects" style={section3}>
 			<div className="section-slant" style={slant}></div>
-			<p className="section-3-subsection">PROFESSIONAL PROJECTS</p>
+			{/* <p className="section-3-subsection">PROFESSIONAL PROJECTS</p>
 			<div className="projects-professional">	
 				{projects.map(project => {
 					if(project.professional){									
@@ -46,8 +46,8 @@ export default function SectionProjects(props) {
 					)} else 
 					return null;
 				})}
-			</div>
-			<p className="section-3-subsection">HOBBY PROJECTS</p>
+			</div> */}
+			<p className="section-3-subsection">PROJECTS</p>
 			<div className="projects-hobby">
 				{projects.map(project => {
 					if(!project.professional){

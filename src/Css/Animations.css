@@ -1,27 +1,57 @@
-
-@keyframes glow {
-	0% {
-		letter-spacing: initial;
-		text-shadow: 0 0 5px #00d8ff, 0 0 8px #00d8ff, 0 0 10px #00d8ff, 0 0 12px #00d8ff, 0 0 15px #00d8ff, 0 0 15px #00d8ff, 0 0 15px #00d8ff;
+@keyframes slide-in{
+	0%{
+		transform: translate(20%, 15%);
+		opacity: 0;
+	}
+	20%{
+		transform: translate(20%, 15%);
+		opacity: 0;
+	}
+	35%{
+		transform: translate(20%, 0%);
+		opacity: 0.1;
 	}
 	100%{
-		letter-spacing: 0.1;
-		color: gray;
-		text-shadow: none;
+		transform: translate(0%, 0%);
+		opacity: 1;
+	}
+}
+@keyframes keepOpacity{
+	0%{
+		opacity: "1"
+	}
+	100%{
+		opacity: "1";
 	}
 }
 @keyframes reveal {
 	0% {
 		opacity: 0;
-		letter-spacing: 1.5vw;
+		letter-spacing: 2.5vw;
 	}
-	50% {
-		opacity: 0.5;
+	15% {
+		opacity: 0;
+		letter-spacing: 2.5vw;
 	}
+
 	100%{
-		color: gray;
 		opacity: 1;
-		letter-spacing: initial;
+		letter-spacing: 8px;
+	}
+}
+@keyframes reveal2 {
+	0% {
+		opacity: 0;
+		letter-spacing: 2.5vw;
+	}
+	30% {
+		opacity: 0;
+		letter-spacing: 2.5vw;
+	}
+
+	100%{
+		opacity: 1;
+		letter-spacing: 8px;
 	}
 }
 @keyframes shine {

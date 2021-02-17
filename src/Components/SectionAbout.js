@@ -36,7 +36,7 @@ export default function SectionAbout(){
 				speed={0.5}
 				ease="circIn" >
 				<h2 className="section-2-text-1" style={text}>
-					Hi! I am Pawel, a proactive and responsible Self-Taught Web Developer.<br></br>
+					Hi! I am Pawel, a proactive and responsible Web Developer.<br></br>
 					I am passionate about coding and always up for a challenge.
 				</h2>
 				</MotionAnimate>
@@ -48,7 +48,7 @@ export default function SectionAbout(){
 				ease="circIn" >
 				<h2 className="section-2-text-2" style={text}>
 					I love problem-solving, and I am excited every time I start a new project.<br></br>
-					I deliver beautiful, fully responsive websites for You and Your business!
+					I deliver beautiful, fully responsive websites.
 				</h2>		
 				</MotionAnimate>
 				<MotionAnimate

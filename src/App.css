@@ -82,6 +82,9 @@ a {
 }
 
 @media only screen and (min-width: 300px){
+	#text{
+		display: none;
+	}
 	.section-1{
 		margin-top: 80px;
 		width: 100%;
@@ -107,22 +110,24 @@ a {
 	}
 	.filter h2 span{
 		font-size: 30px;
+		letter-spacing: 10px;
 	}
 	.filter .h2-1{
 		margin-top: 20px;
-		animation: glow 2.5s ease-in-out infinite alternate 2.5s,
-					reveal 2.5s ease-in-out;
+		line-height: 0.9;
+		animation: slide-in 0.8s ease-out;
 	}
 	.filter .h2-2{
 		font-weight: 400 !important;
 		overflow: hidden;
 		background: linear-gradient(90deg, #00d8ff, silver, #00d8ff);
 		background-repeat: no-repeat;
-		background-size: 60%;
+		background-size: 40%;
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: rgba(255, 255, 255, 0.3);
-		animation: shine 2s linear infinite;
+		animation: shine 3s cubic-bezier(1, 1, 0.22, 0.19) infinite,
+					reveal 3s ease-in;
 		-moz-animation: mozGlow 2s linear infinite alternate 2s;
 		transform: translate(0%, 100px);
 		letter-spacing: 8px;
@@ -132,14 +137,16 @@ a {
 		overflow: hidden;
 		background: linear-gradient(90deg, #00d8ff,silver, #00d8ff);
 		background-repeat: no-repeat;
-		background-size: 60%;
+		background-size: 40%;
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: rgba(255, 255, 255, 0.3);
-		animation: reverseShine 2s linear infinite;
+		animation: reverseShine 3s cubic-bezier(1, 1, 0.22, 0.19) infinite,
+					reveal2 3s ease-in;
 		-moz-animation: mozGlow 2s linear infinite alternate 2s;
 		transform: translate(0%, 150px);
 		letter-spacing: 8px;
+
 	}
 	.button-aboutMe{
 		display: flex;
